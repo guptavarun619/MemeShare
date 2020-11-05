@@ -9,12 +9,10 @@ import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.Volley
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
-import com.bumptech.glide.request.target.DrawableImageViewTarget
 import com.bumptech.glide.request.target.Target
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -33,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         // Instantiate the RequestQueue.
         progressBar.visibility = View.VISIBLE
 
-        val queue = Volley.newRequestQueue(this)
         val url = "https://meme-api.herokuapp.com/gimme"
 
         // Request a string response from the provided URL.
@@ -71,7 +68,7 @@ class MainActivity : AppCompatActivity() {
 
 
         // Add the request to the RequestQueue.
-        queue.add(jsonObjectRequest)
+        MySingleton.getInstance(this).addToRequestQueue(jsonObjectRequest)
 
     }
 

@@ -36,8 +36,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/guideline"
         android:onClick="shareMeme"
-        android:textColor="@color/white"
-        android:background="@color/cardview_shadow_end_color"/>
+        android:textColor="@color/material_on_primary_emphasis_high_type"
+        android:background="@color/design_default_color_primary"/>
 
     <Button
         android:id="@+id/nextButton"
@@ -49,8 +49,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toRightOf="@id/guideline"
         android:onClick="nextMeme"
-        android:textColor="@color/white"
-        android:background="@color/cardview_shadow_end_color"/>
+        android:textColor="@color/material_on_primary_emphasis_high_type"
+        android:background="@color/design_default_color_primary"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
